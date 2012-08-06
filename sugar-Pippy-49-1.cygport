@@ -1,0 +1,13 @@
+SUGAR_TYPE="fructose"
+inherit sugar
+
+
+CYGPORT_USE_UNSTABLE_API=1
+src_unpack_hook() {
+	rm -f *.eml
+	rm -fr library/pippy/physics/*
+	cat > library/pippy/physics/__init__.py <<_EOF
+__all__ = ['locals', 'menu']
+from elements import Elements
+_EOF
+}
