@@ -1,6 +1,11 @@
+NAME="sugar-Pippy"
+VERSION=51
+RELEASE=1
 SUGAR_TYPE="fructose"
 inherit sugar
 
+
+REQUIRES="girepository-Vte2.90"
 
 CYGPORT_USE_UNSTABLE_API=1
 src_unpack_hook() {
